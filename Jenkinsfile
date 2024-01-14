@@ -1,13 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('Git Checkout') {
+    stage('Build') {
       steps {
-        git branch: 'main', url: 'https://github.com/kcsixr/cicd-pipeline.git'
+        sh '''chmod +x scripts/build.sh
+scripts/build.sh'''
       }
     }
 
-    stage('Build') {
+    stage('Test') {
       steps {
         sh '''chmod +x scripts/build.sh
 scripts/build.sh'''
