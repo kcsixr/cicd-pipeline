@@ -17,7 +17,7 @@ scripts/build.sh'''
 
     stage('Build a docker image') {
       steps {
-        sh 'sudo docker build -t kirill/jenkins_cicd_test_image:$BUILD_NUMBER .'
+        sh 'sudo -S docker build -t kirill/jenkins_cicd_test_image:$BUILD_NUMBER .'
       }
     }
 
