@@ -15,4 +15,7 @@ docker push jenkins_cicd_test_image:$BUILD_NUMBER'''
     }
 
   }
+  environment {
+    DOCKERHUB_CREDENTIALS = 'credentials(\'dockerhub-credentials\')'
+  }
 }
